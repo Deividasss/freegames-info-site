@@ -46,7 +46,7 @@
 .details {
     margin: 40px 0 0 30%;
     width: 35%;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
 }
 .nftDetails {
     font-size: 20px;
@@ -94,5 +94,8 @@ span a:hover {
     }
     .nftTitle {
         padding-bottom: 10%;
+    }
+    .details{
+        padding: 0 0 25% 0;
     }
 }
