@@ -1,0 +1,98 @@
+.nftEditMain {
+    background-color: rgba(255, 255, 255, 0.118);
+    color: white;
+    padding-top: 7%;
+}
+.nftEditImg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    opacity: 0.9;
+    box-shadow: 0px 2px 29px 6px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 2px 29px 6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 29px 6px rgba(0, 0, 0, 0.75);
+}
+.nftInfoMain {
+    display: flex;
+}
+.nftTitle {
+    font-size: 40px;
+}
+.nftCollection {
+    font-size: 20px;
+    color: rgb(224, 151, 6);
+    margin-top: 25%;
+}
+.collectionImg {
+    width: 20px;
+    margin-left: 5px;
+}
+.nftInfo {
+    margin: 2% 0 0 8%;
+}
+
+.nftDescriptionTitle {
+    margin-top: 3%;
+    font-size: 20px;
+}
+.description {
+    margin: 5% 10%;
+    width: 80%;
+}
+.nftDescription {
+    font-size: 15px;
+}
+.details {
+    margin: 40px 0 0 30%;
+    width: 35%;
+    padding-bottom: 5%;
+}
+.nftDetails {
+    font-size: 20px;
+}
+.nftCreator {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.652);
+}
+.nftCreatorEmail {
+    float: right;
+    color: rgba(240, 239, 239, 0.773);
+}
+span {
+    a {
+        color: rgb(224, 151, 6);
+    }
+}
+span a:hover {
+    color: rgb(165, 165, 115);
+}
+.itemModalBtn {
+    float: right;
+    margin: 2%;
+}
+
+@media screen and (max-width: 500px) {
+    .details {
+        margin: 40px 0 0 16%;
+        width: 65%;
+        padding-bottom: 5%;
+        text-align: left;
+    }
+    .nftInfoMain {
+        display: block;
+    }
+    .nftCollection {
+        margin: 10% 0% 0 0;
+    }
+    .nftEditImg {
+        margin: auto;
+        margin-top: 25%;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+    .nftTitle {
+        padding-bottom: 10%;
+    }
+}

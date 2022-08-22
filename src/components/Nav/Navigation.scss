@@ -1,3 +1,14 @@
 .navLogo{
-    margin: 0 0 0 10%;
+    margin: 2% 0 0 15%;
+    img{
+        height: 50px;
+        width: 150px;
+    }
+}
+.navMain{
+    background-color: #605f5fea;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    padding: 12px;
 }

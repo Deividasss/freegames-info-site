@@ -3,9 +3,9 @@ import "../Nav/Navigation.scss"
 const Navigation = () => {
     return (
         <>
-            <nav class="navbar">
+            <nav class="navMain">
                 <a class="navLogo" href="/">
-                    <img src="https://1000logos.net/wp-content/uploads/2021/06/GameStop-logo.png" width="100" height="50" class="d-inline-block align-top" alt="" />
+                    <img src="https://www.nitrogames.com/wp-content/themes/swiss/assets/img/NG-LOGO-W.png" class="d-inline-block align-top" alt="" />
                 </a>
             </nav>
 

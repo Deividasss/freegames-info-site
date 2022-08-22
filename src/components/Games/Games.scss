@@ -1,4 +1,9 @@
-
+.gamesMain {
+    background-color: rgba(167, 167, 167, 0.307);
+    width: 90%;
+    margin: auto;
+    padding-top: 7%;
+}
 .product-grid {
     font-family: "Poppins", sans-serif;
     transition: all 0.7s ease 0s;
@@ -22,6 +27,8 @@
 }
 
 .product-grid .product-image img {
+    width: 100%;
+    height: auto;
     max-width: 300px;
     cursor: pointer;
     border-radius: 10px 10px 0 0;
@@ -54,4 +61,75 @@
     border-radius: 5px;
     font-weight: 200;
     font-size: 13px;
+}
+.gameSearch {
+    padding: 1% 0 1% 2%;
+    width: 40%;
+    outline: none;
+    border: 3px solid rgb(139, 139, 139);
+    background-color: rgba(134, 134, 134, 0.536);
+    border-radius: 10px;
+    transition: width 0.4s ease-in-out;
+    color: white;
+}
+.gameSearch::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+}
+.gameSearch:focus {
+    width: 70%;
+    border: solid 3px rgb(40, 40, 40);
+}
+.pageSliderBackground {
+    background-image: url(https://geekculture.co/wp-content/uploads/2020/05/xbox-game-pass-giveaway.jpg);
+    opacity: 0.7;
+    background-size: 50%;
+}
+.homePageSlider {
+    max-width: 34%;
+    border-radius: 30px;
+    margin: auto;
+    box-shadow: 10px 10px 32px 18px rgba(158, 158, 158, 0.66);
+    -webkit-box-shadow: 10px 10px 32px 18px rgba(158, 158, 158, 0.66);
+    -moz-box-shadow: 10px 10px 32px 18px rgba(158, 158, 158, 0.66);
+}
+.sliderImg {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+}
+.freeGamesHeading {
+    color: white;
+    margin: 10% 0 2% 0;
+    font-size: 50px;
+}
+.line2 {
+    color: white;
+    padding: 1%;
+}
+.spacer {
+    padding: 5%;
+}
+
+@media screen and (max-width: 500px) {
+    .pageSliderBackground {
+        background-size: 85%;
+        margin-top: 25%;
+    }
+    .homePageSlider {
+        max-width: 60%;
+    }
+    .gameSearch:focus {
+        width: 100%;
+    }
+    .gameSearch{
+        width: 50%;
+    }
+    .product-grid .product-image img {
+        width: 100%;
+        height: 180px;
+        max-width: 100%;
+        cursor: pointer;
+        border-radius: 10px 10px 0 0;
+    }
 }
