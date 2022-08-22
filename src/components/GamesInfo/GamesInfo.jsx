@@ -1,40 +1,38 @@
-import { Form, Modal, Button, Container } from 'react-bootstrap';
+import axios from "axios";
 import { useEffect, useState } from 'react';
+import { useLocation } from "react-router-dom";
+import "../GamesInfo/GamesInfo.scss"
 
 const GamesInfo = (props) => {
-    const [modal, setModal] = useState(false)
-    const { games2 } = props
+    const { gameId } = props
+    const [games2, setGames2] = useState([])
+    const location = useLocation();
 
-    const openModal = () => {
-        setModal(true)
-    }
+    const options2 = {
+        method: 'GET',
+        url: 'https://free-to-play-games-database.p.rapidapi.com/api/game',
+        params: { id: `${location.state}` },
+        headers: {
+            'X-RapidAPI-Key': '7d28732eafmsh6e4f26b43df1e37p1961edjsn051af40bc39c',
+            'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+        }
+    };
 
-    const hideModal = () => {
-        setModal(false)
-    }
-    
+    useEffect(() => {
+        (async () => {
+            axios.request(options2).then(function (response) {
+                setGames2(response.data)
+            })
+        })()
+    }, [gameId])
+    console.log(games2)
+
     return (
         <>
-           
-            <Modal size="lg" show={modal} aria-labelledby="contained-modal-title-vcenter"
-                centered>
-                <div className="congModal">
-                    <Button
-                        type="button"
-                        className="modalCloseBtn btn-close"
-                        onClick={hideModal}
-                        variant="none"
-                    ></Button>
-                    <Container className="nftEditMain">
-                        <>
-                            <div>
-                                <h1 className="congradsText">{games2.title}</h1>
-                                <h5>{games2.description}</h5>
-                            </div>
-                        </>
-                    </Container>
-                </div>
-            </Modal>
+            <h1>games info</h1>
+            <img src={games2.thumbnail}></img>
+            <h1>{games2.title}</h1>
+            <h5>{games2.description}</h5>
         </>
     )
 }
