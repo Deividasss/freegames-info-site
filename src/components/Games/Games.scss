@@ -14,6 +14,18 @@
     -webkit-box-shadow: 1px -1px 16px -4px rgb(255, 255, 255);
     -moz-box-shadow: 1px -1px 16px -4px rgb(255, 252, 252);
 }
+.product-grid .product-hot-label {
+    color: rgb(0, 0, 0);
+    background: rgba(224, 151, 6, 0.848);
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 7px 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+  }
 .product-grid:hover {
     box-shadow: 1px -1px 16px -4px rgb(255, 255, 255);
     -webkit-box-shadow: 1px -1px 16px -4px rgba(255, 255, 255, 0.999);
@@ -109,6 +121,9 @@
 }
 .spacer {
     padding: 5%;
+}
+.searchIcon{
+    margin: 0 1% 1% 0;
 }
 
 @media screen and (max-width: 500px) {

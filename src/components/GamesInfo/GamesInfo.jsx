@@ -24,21 +24,22 @@ const GamesInfo = (props) => {
     };
 
     useEffect(() => {
-            axios.request(options2).then(function (response) {
-                setGames2(response.data)
-                for (let i = 0; i < response.data.minimum_system_requirements.graphics.length; i++) {
-                    setGraphics(response.data.minimum_system_requirements.graphics)
-                }
-                for (let i = 0; i < response.data.minimum_system_requirements.memory.length; i++) {
-                    setMemory(response.data.minimum_system_requirements.memory)
-                }
-                for (let i = 0; i < response.data.minimum_system_requirements.os.length; i++) {
-                    setOs(response.data.minimum_system_requirements.os)
-                }
-                for (let i = 0; i < response.data.minimum_system_requirements.processor.length; i++) {
-                    setProcessor(response.data.minimum_system_requirements.processor)
-                }
-            })
+        axios.request(options2).then(function (response) {
+            setGames2(response.data)
+            for (let i = 0; i < response.data.minimum_system_requirements.graphics.length; i++) {
+                setGraphics(response.data.minimum_system_requirements.graphics)
+            }
+            for (let i = 0; i < response.data.minimum_system_requirements.memory.length; i++) {
+                setMemory(response.data.minimum_system_requirements.memory)
+            }
+            for (let i = 0; i < response.data.minimum_system_requirements.os.length; i++) {
+                setOs(response.data.minimum_system_requirements.os)
+            }
+            for (let i = 0; i < response.data.minimum_system_requirements.processor.length; i++) {
+                setProcessor(response.data.minimum_system_requirements.processor)
+            }
+        })
+        window.scrollTo(0, 0)
     }, [gameId])
 
     return (
@@ -56,12 +57,16 @@ const GamesInfo = (props) => {
                                 <h3 className="nftCollection">{games2.developer}<img className="collectionImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/800px-Sign-check-icon.png"></img></h3>
                                 <h3 className="nftTitle">{games2.title}</h3>
                                 <div className="details">
-                                    <h3 className="nftDetails">Details:</h3>
+                                    <h3 className="nftDetails">Additional Information</h3>
                                     <hr></hr>
-                                    <h3 className="nftCreator">Developer:<span className="nftCreatorEmail">{games2.developer}</span> </h3>
-                                    <h3 className="nftCreator">Genre:<span className="nftCreatorEmail">{games2.genre}</span> </h3>
-                                    <h3 className="nftCreator">Page:<span className="nftCreatorEmail"> <a target="_blank" rel="noopener noreferrer" href={games2.game_url}>{games2.game_url}</a></span> </h3>
+                                    <h3 className="nftCreator">Developer<span className="nftCreatorEmail">{games2.developer}</span> </h3>
+                                    <h3 className="nftCreator">Genre<span className="nftCreatorEmail">{games2.genre}</span> </h3>
+                                    <h3 className="nftCreator">Release Date<span className="nftCreatorEmail">{games2.release_date}</span> </h3>
+                                    <h3 className="nftCreator">Platform<span className="nftCreatorEmail">{games2.platform}</span> </h3>
                                     <hr></hr>
+                                    <div className="playBtn">
+                                        <a target="_blank" rel="noopener noreferrer" href={games2.game_url} className="playNow">PLAY NOW</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

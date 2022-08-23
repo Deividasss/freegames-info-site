@@ -19,6 +19,29 @@
 .nftTitle {
     font-size: 40px;
 }
+.playBtn{
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+}
+.playNow{
+    background-color: rgb(224, 151, 6);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 90px 15px 90px;
+    font-weight: bold;
+    box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    transition: all 0.5s ease 0s;
+    text-decoration: none;
+}
+.playNow:hover{
+    color: white;
+    background-color: rgb(146, 99, 4);
+    cursor: pointer;
+}
 .nftCollection {
     font-size: 20px;
     color: rgb(224, 151, 6);
@@ -125,49 +148,8 @@ span a:hover {
         color: rgba(240, 239, 239, 0.773);
         font-size: 12px;
     }
+    .playBtn{
+        text-align: center;
+    }
 }
 
-
-/* {games.filter(goods => goods.title.toLowerCase().includes(search)).map((game) => (
-                            <div class="col-md-3 ">
-                                <div class="product-grid">
-                                    <div class="product-image">
-                                        <a onClick={() => { setGameId(game.id); navigate("/gameInfo", { state: game.id }) }} class="image">
-                                            <img class="pic-1" src={game.thumbnail} />
-                                        </a>
-                                    </div>
-                                    <div class="product-content">
-                                        <h3 className="product-title">{game.title}</h3>
-                                        <hr className="line"></hr>
-                                        <h3 className="product-collection">Developer<span className="product-network">{game.developer}</span></h3>
-                                        <h3 className="product-collection">Genre<span className="product-network">{game.genre}</span></h3>
-                                        <h3 className="product-collection">Platform<span className="product-network">{game.platform}</span></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        ))} 
-                        
-                        
-                        
-                        axios.request(options).then(function (response) {
-            for (let i = 0; i < response.data.length; i++) {
-                setGames(response.data)
-            }
-        })
-        
-        
-         axios.request(options2).then(function (response) {
-                setGames2(response.data)
-                for (let i = 0; i < response.data.minimum_system_requirements.graphics.length; i++) {
-                    setGraphics(response.data.minimum_system_requirements.graphics)
-                }
-                for (let i = 0; i < response.data.minimum_system_requirements.memory.length; i++) {
-                    setMemory(response.data.minimum_system_requirements.memory)
-                }
-                for (let i = 0; i < response.data.minimum_system_requirements.os.length; i++) {
-                    setOs(response.data.minimum_system_requirements.os)
-                }
-                for (let i = 0; i < response.data.minimum_system_requirements.processor.length; i++) {
-                    setProcessor(response.data.minimum_system_requirements.processor)
-                }
-            })*/

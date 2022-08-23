@@ -3,6 +3,7 @@ import { Form, Modal, Button, Container } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import "../Games/Games.scss"
 import Carousel from 'react-bootstrap/Carousel'
+import { FaSearch } from 'react-icons/fa';
 import { useNavigate, Link } from "react-router-dom";
 
 const Games = () => {
@@ -67,7 +68,7 @@ const Games = () => {
                     </div>
                 </div>
                 <div className="container">
-                    <h1 className="freeGamesHeading">All free games...</h1>
+                    <h1 className="freeGamesHeading">{<FaSearch className="searchIcon" />}Find Games</h1>
                     <input
                         onChange={handleChange}
                         placeholder="Search.."
@@ -84,6 +85,7 @@ const Games = () => {
                                         <a onClick={() => { setGameId(game.id); navigate("/gameInfo", { state: game.id }) }} class="image">
                                             <img class="pic-1" src={game.thumbnail} />
                                         </a>
+                                        <span class="product-hot-label">FREE</span>
                                     </div>
                                     <div class="product-content">
                                         <h3 className="product-title">{game.title}</h3>
@@ -95,7 +97,7 @@ const Games = () => {
                                 </div>
                             </div>
                         ))}
-                         <span className="spacer"></span>
+                        <span className="spacer"></span>
                     </div>
                 </div>
             </div>
