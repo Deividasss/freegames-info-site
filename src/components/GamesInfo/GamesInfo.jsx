@@ -13,10 +13,18 @@ const GamesInfo = (props) => {
     const [processor, setProcessor] = useState([])
     const location = useLocation();
 
+    const options2 = {
+        method: 'GET',
+        url: 'https://free-to-play-games-database.p.rapidapi.com/api/game',
+        params: { id: `${location.state}` },
+        headers: {
+            'X-RapidAPI-Key': '7d28732eafmsh6e4f26b43df1e37p1961edjsn051af40bc39c',
+            'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+        }
+    };
 
     useEffect(() => {
-        axios.get(`https://www.freetogame.com/api/game?id=${location.state}`)
-            .then(response => {
+            axios.request(options2).then(function (response) {
                 setGames2(response.data)
                 for (let i = 0; i < response.data.minimum_system_requirements.graphics.length; i++) {
                     setGraphics(response.data.minimum_system_requirements.graphics)
