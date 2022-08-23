@@ -10,26 +10,14 @@ const Games = () => {
     const [games, setGames] = useState([])
     const [search, setSearch] = useState('')
     const [gameId, setGameId] = useState([])
-    const [modal, setModal] = useState(false)
-    const [fullscreen, setFullscreen] = useState(true);
     const navigate = useNavigate();
-
-    const options = {
-        method: 'GET',
-        url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
-        headers: {
-            'X-RapidAPI-Key': '7d28732eafmsh6e4f26b43df1e37p1961edjsn051af40bc39c',
-            'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-        }
-    };
 
 
     useEffect(() => {
-        axios.request(options).then(function (response) {
-            for (let i = 0; i < response.data.length; i++) {
+        axios.get(`https://www.freetogame.com/api/games`)
+            .then(response => {
                 setGames(response.data)
-            }
-        })
+            })
     }, [search])
 
     const handleChange = (e) => {

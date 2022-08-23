@@ -13,19 +13,10 @@ const GamesInfo = (props) => {
     const [processor, setProcessor] = useState([])
     const location = useLocation();
 
-    const options2 = {
-        method: 'GET',
-        url: 'https://free-to-play-games-database.p.rapidapi.com/api/game',
-        params: { id: `${location.state}` },
-        headers: {
-            'X-RapidAPI-Key': '7d28732eafmsh6e4f26b43df1e37p1961edjsn051af40bc39c',
-            'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-        }
-    };
 
     useEffect(() => {
-        (async () => {
-            axios.request(options2).then(function (response) {
+        axios.get(`https://www.freetogame.com/api/game?id=${location.state}`)
+            .then(response => {
                 setGames2(response.data)
                 for (let i = 0; i < response.data.minimum_system_requirements.graphics.length; i++) {
                     setGraphics(response.data.minimum_system_requirements.graphics)
@@ -40,7 +31,6 @@ const GamesInfo = (props) => {
                     setProcessor(response.data.minimum_system_requirements.processor)
                 }
             })
-        })()
     }, [gameId])
 
     return (
@@ -76,8 +66,11 @@ const GamesInfo = (props) => {
                             <h3 className="nftDetails">Minimum system requirements:</h3>
                             <hr></hr>
                             <h3 className="nftCreator">Graphics:<span className="nftCreatorEmail">{graphics}</span> </h3>
+                            <hr></hr>
                             <h3 className="nftCreator">Processor:<span className="nftCreatorEmail">{processor}</span> </h3>
+                            <hr></hr>
                             <h3 className="nftCreator">Memory:<span className="nftCreatorEmail">{memory}</span> </h3>
+                            <hr></hr>
                             <h3 className="nftCreator">Os:<span className="nftCreatorEmail">{os}</span> </h3>
                             <hr></hr>
                         </div>

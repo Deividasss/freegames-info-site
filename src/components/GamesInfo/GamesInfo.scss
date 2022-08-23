@@ -81,11 +81,14 @@ span a:hover {
 }
 
 @media screen and (max-width: 500px) {
-    .details {
-        margin: 40px 0 0 16%;
-        width: 65%;
-        padding-bottom: 5%;
-        text-align: left;
+    .description {
+        margin: auto;
+        margin-bottom: 10%;
+        width: 100%;
+        margin-top: -10%;
+    }
+    .nftInfo {
+        margin: 0;
     }
     .nftInfoMain {
         display: block;
@@ -113,4 +116,58 @@ span a:hover {
         margin: auto;
         padding: 0 0 35% 0;
     }
+    .nftCreator {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.652);
+    }
+    .nftCreatorEmail {
+        float: right;
+        color: rgba(240, 239, 239, 0.773);
+        font-size: 12px;
+    }
 }
+
+
+/* {games.filter(goods => goods.title.toLowerCase().includes(search)).map((game) => (
+                            <div class="col-md-3 ">
+                                <div class="product-grid">
+                                    <div class="product-image">
+                                        <a onClick={() => { setGameId(game.id); navigate("/gameInfo", { state: game.id }) }} class="image">
+                                            <img class="pic-1" src={game.thumbnail} />
+                                        </a>
+                                    </div>
+                                    <div class="product-content">
+                                        <h3 className="product-title">{game.title}</h3>
+                                        <hr className="line"></hr>
+                                        <h3 className="product-collection">Developer<span className="product-network">{game.developer}</span></h3>
+                                        <h3 className="product-collection">Genre<span className="product-network">{game.genre}</span></h3>
+                                        <h3 className="product-collection">Platform<span className="product-network">{game.platform}</span></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        ))} 
+                        
+                        
+                        
+                        axios.request(options).then(function (response) {
+            for (let i = 0; i < response.data.length; i++) {
+                setGames(response.data)
+            }
+        })
+        
+        
+         axios.request(options2).then(function (response) {
+                setGames2(response.data)
+                for (let i = 0; i < response.data.minimum_system_requirements.graphics.length; i++) {
+                    setGraphics(response.data.minimum_system_requirements.graphics)
+                }
+                for (let i = 0; i < response.data.minimum_system_requirements.memory.length; i++) {
+                    setMemory(response.data.minimum_system_requirements.memory)
+                }
+                for (let i = 0; i < response.data.minimum_system_requirements.os.length; i++) {
+                    setOs(response.data.minimum_system_requirements.os)
+                }
+                for (let i = 0; i < response.data.minimum_system_requirements.processor.length; i++) {
+                    setProcessor(response.data.minimum_system_requirements.processor)
+                }
+            })*/
