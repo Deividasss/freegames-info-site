@@ -1,0 +1,213 @@
+.mainPage {
+    background-color: rgba(167, 167, 167, 0.307);
+    width: 90%;
+    margin: auto;
+    padding-top: 6%;
+}
+.heading {
+    color: white;
+    text-align: center;
+    background-image: url(https://wallpapercave.com/wp/wp2635955.jpg);
+    background-size: 100%;
+    background-position: 0% 5%;
+    opacity: 0.9;
+    padding: 5%;
+
+    p {
+        width: 50%;
+        margin: auto;
+    }
+}
+.browseBtn {
+    background-color: rgb(224, 151, 6);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 60px 15px 60px;
+    font-weight: bold;
+    box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 1px 22px -7px rgba(0, 0, 0, 0.75);
+    transition: all 0.5s ease 0s;
+    margin-top: 2%;
+}
+.browseBtn:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(146, 99, 4);
+    cursor: pointer;
+}
+.newReleases {
+    color: white;
+    margin: 5% 0 0% 5%;
+}
+.gameCard {
+    display: flex;
+    background-color: rgba(64, 64, 64, 0.834);
+    margin: 7px;
+   width: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.147);
+    transition: all 0.8s ease 0s;
+}
+.gameCard:hover {
+    transform: scale(1.02);
+    background-color: rgba(36, 36, 36, 0.834);
+}
+.gameCardMain {
+    width: auto;
+}
+.gamePic {
+    width: 200px;
+    padding: 5%;
+    border-radius: 15px;
+}
+.gameLink {
+    text-decoration: none;
+    cursor: pointer;
+}
+.gameInfo {
+    margin-top: 1%;
+    h1 {
+        color: white;
+        font-size: 25px;
+    }
+    h2 {
+        color: white;
+        font-size: 15px;
+        background-color: rgb(101, 101, 101);
+        padding: 1%;
+        border-radius: 5px;
+        width: 23%;
+        text-align: center;
+    }
+    h3 {
+        color: rgba(255, 255, 255, 0.523);
+        font-size: 15px;
+    }
+    .line3 {
+        color: white;
+        margin: -1% 0 3% 0;
+    }
+}
+.mainGamesInfo{
+    display: flex;
+}
+.line4{
+    color: white;
+    width: 123%;
+    margin-top: -2%;
+}
+.mostPlayed {
+    padding: 7px 5% 0 5%;
+    h1 {
+        color: white;
+        font-size: 35px;
+        width: 120%;
+    }
+}
+.mainGamesInfo{
+    padding: 10% 0 10% 0;
+}
+.product-grid2 {
+    font-family: "Poppins", sans-serif;
+    transition: all 0.7s ease 0s;
+    padding: 1%;
+    width: 120%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    box-shadow: 1px -1px 16px -4px rgb(255, 255, 255);
+    -webkit-box-shadow: 1px -1px 16px -4px rgb(255, 255, 255);
+    -moz-box-shadow: 1px -1px 16px -4px rgb(255, 252, 252);
+}
+.product-grid2 .product-hot-label {
+    color: rgb(0, 0, 0);
+    background: rgba(224, 151, 6, 0.848);
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 7px 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+.product-grid2:hover {
+    box-shadow: 1px -1px 16px -4px rgb(255, 255, 255);
+    -webkit-box-shadow: 1px -1px 16px -4px rgba(255, 255, 255, 0.999);
+    -moz-box-shadow: 1px -1px 16px -4px rgb(255, 255, 255);
+    transform: scale(1.04);
+}
+.product-grid2 .product-image {
+    overflow: hidden;
+    position: relative;
+    max-height: 170px;
+}
+
+.product-grid2 .product-image img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    cursor: pointer;
+    border-radius: 10px 10px 0 0;
+}
+
+.product-grid2 .product-content {
+    padding: 15px 12px;
+    position: relative;
+    border-radius: 0 0 10px 10px;
+}
+.product-grid2 .product-title {
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+.line {
+    color: rgb(255, 255, 255);
+}
+.product-grid2 .product-collection {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+}
+.product-grid2 .product-network {
+    float: right;
+    color: black;
+    background-color: white;
+    padding: 1%;
+    border-radius: 5px;
+    font-weight: 200;
+    font-size: 13px;
+}
+@media screen and (max-width: 500px) {
+    .product-grid2{
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+    }
+    .heading {
+        margin-top: 25%;
+        background-image: none;
+        p {
+            width: 100%;
+        }
+    }
+    .newReleases{
+        padding-top: 15%;
+    }
+    .mainGamesInfo{
+        display: block;
+    }
+    .mostPlayed{
+        margin-top: 15%;
+        padding-bottom: 60%;
+        h1{
+            margin-bottom: 5%;
+            text-align: left;
+            font-size: 30px;
+        }
+    }
+    .line4{
+        width: 100%;
+    }
+}

@@ -1,14 +1,37 @@
-.navLogo{
-    margin: 2% 0 0 15%;
-    img{
+.navLogo {
+    margin-left: 10%;
+    img {
         height: 50px;
         width: 150px;
     }
 }
-.navMain{
+.navMain {
     background-color: #605f5fea;
     position: fixed;
     width: 100%;
-    z-index: 9999;
-    padding: 12px;
+    z-index: 999;
+    padding: 10px;
 }
+
+.navLinks {
+    display: flex;
+}
+.links{
+    margin-left: 2%;
+}
+.navLink {
+    color: orange;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    text-decoration: none;
+}
+.navLink:hover {
+    color: rgb(255, 210, 126);
+}
+.searchIcon2{
+    margin-right: 8px;
+}
+

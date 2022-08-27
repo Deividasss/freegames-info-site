@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import GamesInfo from './components/GamesInfo/GamesInfo';
 import Navigation from './components/Nav/Navigation';
 import Footer from './components/Footer/Footer';
+import MainPage from './components/MainPage/MainPage';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Router>
         <Navigation />
         <Routes>
-          <Route exact path='/' element={<Games />} />
+        <Route exact path='/' element={<MainPage />} />
+          <Route exact path='/games' element={<Games />} />
           <Route exact path='/gameInfo' element={<GamesInfo />} />
         </Routes>
         <Footer />
