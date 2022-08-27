@@ -200,7 +200,7 @@
     }
     .mostPlayed{
         margin-top: 15%;
-        padding-bottom: 60%;
+        padding-bottom: 35%;
         h1{
             margin-bottom: 5%;
             text-align: left;
@@ -209,5 +209,33 @@
     }
     .line4{
         width: 100%;
+    }
+    .gamePic{
+        width: 170px;
+        height: 150px;
+    }
+    .gameInfo {
+        margin-top: 1%;
+        h1 {
+            color: white;
+            font-size: 25px;
+        }
+        h2 {
+            color: white;
+            font-size: 15px;
+            background-color: rgb(101, 101, 101);
+            padding: 1%;
+            border-radius: 5px;
+            width: 60%;
+            text-align: center;
+        }
+        h3 {
+            color: rgba(255, 255, 255, 0.523);
+            font-size: 13px;
+        }
+        .line3 {
+            color: white;
+            margin: -1% 0 3% 0;
+        }
     }
 }
