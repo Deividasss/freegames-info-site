@@ -12,6 +12,7 @@ const Games = () => {
     const [search, setSearch] = useState('')
     const [gameId, setGameId] = useState([])
     const navigate = useNavigate();
+    window.scrollTo(0, 0)
 
     const options = {
         method: 'GET',
